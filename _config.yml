@@ -12,6 +12,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .zedstate
+  - distributions.sh
 
 # Build settings
 markdown: kramdown
