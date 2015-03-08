@@ -16,15 +16,13 @@ set -e
 mkdir -p "$DIST"
 FPM="bundle exec fpm"
 if [ -n "$CI_PULL_REQUESTS" ]; then
-    VERSION="pr"
-    RELEASE="$CIRCLE_BUILD_NUM"
+    VERSION="$CIRCLE_BUILD_NUM"
 elif [ -n "$CIRCLE_BRANCH" ]; then
-    VERSION=$(echo "$CIRCLE_BRANCH" | tr '[:lower:]' '[:upper:]')
-    RELEASE="$CIRCLE_BUILD_NUM"
+    VERSION="$CIRCLE_BUILD_NUM"
 else
-    VERSION="dev"
-    RELEASE=$(git describe 2>/dev/null || (git rev-list HEAD | wc -l | tr -d ' '))
+    VERSION=$(git describe 2>/dev/null || (git rev-list HEAD | wc -l | tr -d ' '))
 fi
+RELEASE=1
 function package {
     $FPM -s dir \
          -n "$NAME" \
