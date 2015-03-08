@@ -1,0 +1,28 @@
+<article class="blogpost">
+  <h1>
+    {% if include.url %}
+      <a href="{{include.url}}">
+    {% endif %}
+      {{ include.title }}
+    {% if include.url %}
+      </a>
+    {% endif %}
+  </h1>
+  <div class="timestamp">
+    {% assign d = include.date | date: "%-d" %}
+    {% case d %}
+      {% when "1" or "21" or "31" %}
+        {{ d }}<sup>st</sup>
+      {% when "2" or "22" %}
+        {{ d }}<sup>nd</sup>
+      {% when "3" or "23" %}
+        {{ d }}<sup>rd</sup>
+      {% else %}
+        {{ d }}<sup>th</sup>
+    {% endcase %} of
+    {{ include.date | date: "%B" }},
+    {{ include.date | date: "%Y" }}
+  </div>
+  {{ include.content }}
+</article>
+

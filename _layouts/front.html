@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile#">
+  <head>
+    <meta charset="utf-8">
+    <title>Alistair Lynn</title>
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+    <meta property="og:title" content="{{ page.title }}">
+    {% if page.image %}
+      <meta property="og:image" content="{{ page.image }}">
+    {% else %}
+      <meta property="og:image" content="{{ site.url }}/images/avsmall.jpg">
+    {% endif %}
+    {% if page.og_type %}
+      <meta property="og:type" content="{{ page.og_type }}">
+    {% else %}
+      <meta property="og:type" content="website">
+    {% endif %}
+    {% for og_extra in og_properties %}
+      <meta property="{{ og_extra[0] }}" content="{{ og_extra[1] }}">
+    {% endfor %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="author" href="{{ site.url }}/humans.txt">
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
+

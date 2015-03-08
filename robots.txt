@@ -1,0 +1,4 @@
+Sitemap: http://alynn.co.uk/sitemap.xml
+User-agent: *
+Disallow: /bits/
+

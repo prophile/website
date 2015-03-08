@@ -1,0 +1,41 @@
+# Site settings
+title: Alistair Lynn
+email: alistair@alynn.co.uk
+description: > # this means to ignore newlines until "baseurl:"
+  Alistair Lynn: freelance game developer. Ramblings and opinions.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://alynn.co.uk" # the base hostname & protocol for your site
+twitter_username: arplynn
+github_username:  prophile
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .zedstate
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+paginate: 5
+
+gems:
+  - jekyll-sitemap
+
+colleagues:
+  olly: 'Oliver Knott'
+  sam: '<a href="http://samphippen.com">Sam Phippen</a>'
+  jmorse: 'Jeremy Morse'
+  lilafisch: '<a href="https://twitter.com/lilafisch">lilafisch</a>'
+  taylor: '<a href="http://taylor-vaughan.com">Taylor Vaughan</a>'
+  aaron: '<a href="http://aaronjgordon.com/">Aaron Gordon</a>'
+  chris: '<a href="http://chrisraadjes.blogspot.co.uk/">Chris Raadjes</a>'
+  jenny: '<a href="http://mud.co.uk/jenny/">Jenny Bartle</a>'
+  nick: '<a href="https://twitter.com/nfreader/">Nick Farley</a>'
+  nik: 'Nikoli Dryden'
+  alec: '<a href="https://twitter.com/zugok8">Alec Ingulsrud</a>'
+  miah: 'Miah Clayton'
+  tycho: '<a href="https://www.uplinklabs.net/">Steven Noonan</a>'
+  simon: '<a href="http://simonporter.com/">Simon Porter</a>'
+  charlie: '<a href="https://www.facebook.com/MolemanDnB">Charlie Cox</a>'
+  mike: 'Michael Field'
+

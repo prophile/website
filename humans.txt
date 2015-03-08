@@ -1,0 +1,19 @@
+---
+---
+/* TEAM */
+  Starring: Alistair Lynn
+  Site: http://alynn.co.uk/
+  Twitter: arplynn
+  Location: Southampton, UK.
+
+/* THANKS */{% for colleague in site.colleagues %}
+  Name: {{ colleague[1] | strip_html }}{% endfor %}
+  Name: Sue Stokell
+  Name: Alison Lynn
+  Name: Ian Lynn
+
+/* SITE */
+  Last update: {{ 'now' | date: '%Y/%m/%d' }}
+  Standards: HTML5, CSS3, Microdata
+  Software: Jekyll
+
